@@ -2,10 +2,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
 // Logo SVG component
-const EVHLogo = ({ className = "h-8 w-8" }) => (
+const EVHLogo = ({ className = "h-8 w-8", variant = "gradient" }) => (
   <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 10 C70 20, 85 35, 85 50 C85 65, 70 80, 50 90 C30 80, 15 65, 15 50 C15 35, 30 20, 50 10 Z" 
-          fill="url(#logoGradient)" />
+    <path d="M50 10 C70 20, 85 35, 85 50 C85 65, 70 80, 50 90 C30 80, 15 65, 15 50 C15 35, 30 20, 50 10 Z M50 25 C60 30, 70 40, 70 50 C70 60, 60 70, 50 75 C50 70, 55 65, 55 50 C55 40, 50 30, 50 25 Z" 
+          fill={variant === "gradient" ? "url(#logoGradient)" : variant === "white" ? "#ffffff" : "#8B8B8B"} />
     <defs>
       <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#10b981" />
@@ -114,6 +114,9 @@ export default function Page() {
         <div className="relative bg-black/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl overflow-hidden">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500/10 via-gray-600/10 to-emerald-500/10 rounded-3xl blur opacity-50"></div>
           <div className="relative z-10">
+            <div className="flex items-center justify-center mb-6">
+              <EVHLogo className="h-16 w-16 md:h-20 md:w-20" variant="gradient" />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               <span className="bg-gradient-to-r from-emerald-400 via-gray-200 to-emerald-500 bg-clip-text text-transparent">
                 Building Durable
@@ -232,8 +235,8 @@ export default function Page() {
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                          <span className="text-white font-bold text-sm">EVH</span>
+                        <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center p-2">
+                          <EVHLogo className="h-6 w-6" variant="white" />
                         </div>
                         <div>
                           <h3 className="text-sm font-semibold text-white">EVH Corporate Development</h3>
