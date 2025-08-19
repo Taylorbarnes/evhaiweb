@@ -203,6 +203,83 @@ export default function Page() {
         </footer>
       </div>
 
+      {/* EVH Leadership Section */}
+      <div className="relative max-w-6xl w-full mx-4 md:mx-8 lg:mx-auto mb-8">
+        <div className="relative bg-black/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl overflow-hidden">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500/10 via-gray-600/10 to-emerald-500/10 rounded-3xl blur opacity-50"></div>
+          <div className="relative z-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-emerald-400 via-gray-200 to-emerald-500 bg-clip-text text-transparent">
+                  EVH Leadership
+                </span>
+              </h2>
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Bending the curve on energy transition—guided by experience, powered by innovation, committed to sustainable impact.
+              </p>
+              <div className="mt-6">
+                <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white text-sm font-medium shadow-lg shadow-emerald-500/25 transition-all duration-300 backdrop-blur-sm">
+                  <span className="bg-gradient-to-r from-white to-gray-100 bg-clip-text text-transparent font-semibold">
+                    Partner with us
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Leadership Team Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Benjamin P. Cowart */}
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
+                <div className="mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                    <span className="text-2xl font-bold text-white">BC</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white text-center mb-2">Benjamin P. Cowart</h3>
+                  <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                    CEO/Founder, Governance, Corporate Development & Strategy
+                  </p>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Ben is the Founder and CEO of EVH Corporate Development, LLC, with 39+ years of leadership in the energy transition. He previously led Vertex Energy through refinery transformation for renewable fuels. A Harvard AMP graduate and Ernst & Young Entrepreneur of the Year National finalist, Cowart is recognized for bridging traditional energy with sustainable innovation across the evolving energy landscape.
+                </p>
+              </div>
+
+              {/* Ayana L. Hill */}
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
+                <div className="mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                    <span className="text-2xl font-bold text-white">AH</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white text-center mb-2">Ayana L. Hill</h3>
+                  <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                    Executive Director, Creative Strategy & Brand Innovation
+                  </p>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Ayana Hill is a strategic brand innovator with over 13 years' experience in technology, advertising, government, and sports/entertainment. At EVH Corp, she oversees brand identity, communications, and creative operations, driving impactful storytelling and sustainable energy transition solutions.
+                </p>
+              </div>
+
+              {/* Taylor Barnes */}
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30 md:col-span-2 lg:col-span-1">
+                <div className="mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                    <span className="text-2xl font-bold text-white">TB</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white text-center mb-2">Taylor Barnes</h3>
+                  <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                    Intern – Finance Major, Corporate Execution
+                  </p>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Taylor Barnes, a finance major intern at EVH Corporate Development, supports key research and operational initiatives. Currently a Dean's List student at the University of St. Thomas, she demonstrates strong analytical and entrepreneurial skills through her academic research and competition involvement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* LinkedIn Posts Section */}
       <div className="relative max-w-6xl w-full mx-4 md:mx-8 lg:mx-auto mb-8">
         <div className="relative bg-black/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl overflow-hidden">
