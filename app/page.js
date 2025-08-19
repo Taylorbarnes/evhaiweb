@@ -119,11 +119,11 @@ export default function Page() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
               <span className="bg-gradient-to-r from-emerald-400 via-gray-200 to-emerald-500 bg-clip-text text-transparent">
-                Building Durable
+                Bending the Curve
               </span>
               <br />
               <span className="bg-gradient-to-r from-gray-200 via-emerald-400 to-gray-200 bg-clip-text text-transparent">
-                Energy Businesses
+                On new energy solutions
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
