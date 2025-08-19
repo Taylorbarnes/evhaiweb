@@ -68,17 +68,27 @@ export default function Page() {
   const linkedinPosts = [
     {
       id: 1,
-      date: "2 days ago",
-      content: "Excited to announce our partnership with leading renewable energy developers in the Pacific Northwest. Together, we're accelerating the deployment of clean energy infrastructure that will power communities for decades to come.",
-      engagement: "45 likes • 12 comments",
-      link: "https://www.linkedin.com/company/evhcorp/"
+      date: "2 months ago",
+      content: "EVH Corp in Monaco: Reflections from the EY World Entrepreneur of the Year 2025. Our CEO, Ben Cowart, represented EVH Corp at the EY World Entrepreneur of the Year Conference in Monaco, an exceptional gathering of world-class entrepreneurs, investors, and innovators from over 43 countries.",
+      engagement: "3+ reactions",
+      link: "https://www.linkedin.com/company/evhcorp/",
+      highlight: "EY World Entrepreneur Conference"
     },
     {
       id: 2,
-      date: "1 week ago", 
-      content: "Our latest project in Texas demonstrates how operational excellence and cutting-edge technology can drive both profitability and environmental impact. Read more about our approach to sustainable energy development.",
-      engagement: "72 likes • 18 comments",
-      link: "https://www.linkedin.com/company/evhcorp/"
+      date: "3 months ago", 
+      content: "Today marks an exciting new chapter in the energy transition journey. At EVH Corporate Development, LLC, we're leveraging decades of expertise from our founder, Ben Cowart—who successfully led Vertex Energy to become a top innovator in sustainable fuel and product solutions.",
+      engagement: "5 reactions",
+      link: "https://www.linkedin.com/company/evhcorp/",
+      highlight: "New Chapter in Energy Transition"
+    },
+    {
+      id: 3,
+      date: "3 months ago",
+      content: "EVH Corp is an energy operating & holdings firm bending the curve on new energy solutions. From sustainable technology breakthroughs to strategic acquisitions, our team believes in the transformative power of investing and long-term collaboration.",
+      engagement: "Multiple reactions",
+      link: "https://www.linkedin.com/company/evhcorp/",
+      highlight: "Bending the Curve on Energy Solutions"
     }
   ];
 
@@ -188,6 +198,80 @@ export default function Page() {
             </button>
           </div>
         </footer>
+      </div>
+
+      {/* LinkedIn Posts Section */}
+      <div className="relative max-w-6xl w-full mx-4 md:mx-8 lg:mx-auto mb-8">
+        <div className="relative bg-black/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl overflow-hidden">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500/10 via-gray-600/10 to-emerald-500/10 rounded-3xl blur opacity-50"></div>
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 via-gray-200 to-emerald-500 bg-clip-text text-transparent">
+                Latest from EVH Corporate Development
+              </h2>
+              <a 
+                href="https://www.linkedin.com/company/evhcorp/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors duration-300 flex items-center gap-2"
+              >
+                View on LinkedIn
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+            </div>
+            
+            {/* Horizontal Scrolling Posts */}
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex gap-6 pb-4" style={{ width: 'max-content' }}>
+                {linkedinPosts.map((post) => (
+                  <div 
+                    key={post.id} 
+                    className="flex-shrink-0 w-80 bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">EVH</span>
+                        </div>
+                        <div>
+                          <h3 className="text-sm font-semibold text-white">EVH Corporate Development</h3>
+                          <p className="text-xs text-gray-400">{post.date}</p>
+                        </div>
+                      </div>
+                      <svg className="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </div>
+                    
+                    {post.highlight && (
+                      <div className="inline-block px-3 py-1 bg-emerald-500/20 border border-emerald-400/30 rounded-full text-xs text-emerald-300 mb-3">
+                        {post.highlight}
+                      </div>
+                    )}
+                    
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-4">
+                      {post.content}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500">{post.engagement}</span>
+                      <a 
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-400 hover:text-emerald-300 text-xs font-medium transition-colors duration-300"
+                      >
+                        Read more →
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
