@@ -59,11 +59,31 @@ function useAutoScroll() {
 
 export default function Page() {
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Welcome to EVH. I’m your AI assistant. Ask anything about our mission, services, partnerships, or investment thesis." }
+    { role: "assistant", content: "Welcome to EVH. I'm your AI assistant. Ask anything about our mission, services, partnerships, or investment thesis." }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const { ref: streamRef, scrollToBottom } = useAutoScroll();
+  const leadershipScrollRef = useRef(null);
+
+  // Leadership scroll functions
+  const scrollLeadershipLeft = () => {
+    if (leadershipScrollRef.current) {
+      leadershipScrollRef.current.scrollBy({
+        left: -320, // Width of one card (w-80 = 320px) 
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollLeadershipRight = () => {
+    if (leadershipScrollRef.current) {
+      leadershipScrollRef.current.scrollBy({
+        left: 320, // Width of one card (w-80 = 320px)
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const linkedinPosts = [
     {
@@ -226,8 +246,30 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Leadership Team Horizontal Scroll */}
-            <div className="overflow-x-auto scrollbar-hide">
+            {/* Leadership Team Horizontal Scroll with Navigation */}
+            <div className="relative">
+              {/* Navigation Buttons */}
+              <button 
+                onClick={scrollLeadershipLeft}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/25 transition-all duration-300 backdrop-blur-sm -ml-6"
+                aria-label="Scroll left"
+              >
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button 
+                onClick={scrollLeadershipRight}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/25 transition-all duration-300 backdrop-blur-sm -mr-6"
+                aria-label="Scroll right"
+              >
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              <div ref={leadershipScrollRef} className="overflow-x-auto scrollbar-hide">
               <div className="flex gap-6 pb-4" style={{ width: 'max-content' }}>
                 {/* Benjamin P. Cowart */}
                 <div className="flex-shrink-0 w-80 bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
@@ -308,6 +350,7 @@ export default function Page() {
                     Paul is an IBM-certified Product Manager with deep expertise in artificial intelligence and a proven track record in sales. He combines a strong technical foundation with years of client-facing experience, allowing him to align product innovation with market needs. Paul is passionate about applying emerging technologies to create practical, growth-focused solutions, and his ability to connect strategy with execution makes him a valuable addition to the team.
                   </p>
                 </div>
+              </div>
               </div>
             </div>
           </div>
