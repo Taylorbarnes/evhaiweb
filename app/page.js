@@ -226,54 +226,88 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Leadership Team Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Benjamin P. Cowart */}
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
-                <div className="mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">BC</span>
+            {/* Leadership Team Horizontal Scroll */}
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex gap-6 pb-4" style={{ width: 'max-content' }}>
+                {/* Benjamin P. Cowart */}
+                <div className="flex-shrink-0 w-80 bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                      <span className="text-2xl font-bold text-white">BC</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white text-center mb-2">Benjamin P. Cowart</h3>
+                    <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                      CEO/Founder, Governance, Corporate Development & Strategy
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white text-center mb-2">Benjamin P. Cowart</h3>
-                  <p className="text-emerald-400 text-sm font-medium text-center mb-4">
-                    CEO/Founder, Governance, Corporate Development & Strategy
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Ben is the Founder and CEO of EVH Corporate Development, LLC, with 39+ years of leadership in the energy transition. He previously led Vertex Energy through refinery transformation for renewable fuels. A Harvard AMP graduate and Ernst & Young Entrepreneur of the Year National finalist, Cowart is recognized for bridging traditional energy with sustainable innovation across the evolving energy landscape.
                   </p>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Ben is the Founder and CEO of EVH Corporate Development, LLC, with 39+ years of leadership in the energy transition. He previously led Vertex Energy through refinery transformation for renewable fuels. A Harvard AMP graduate and Ernst & Young Entrepreneur of the Year National finalist, Cowart is recognized for bridging traditional energy with sustainable innovation across the evolving energy landscape.
-                </p>
-              </div>
 
-              {/* Ayana L. Hill */}
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
-                <div className="mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">AH</span>
+                {/* Ayana L. Hill */}
+                <div className="flex-shrink-0 w-80 bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                      <span className="text-2xl font-bold text-white">AH</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white text-center mb-2">Ayana L. Hill</h3>
+                    <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                      Executive Director, Creative Strategy & Brand Innovation
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white text-center mb-2">Ayana L. Hill</h3>
-                  <p className="text-emerald-400 text-sm font-medium text-center mb-4">
-                    Executive Director, Creative Strategy & Brand Innovation
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Ayana Hill is a strategic brand innovator with over 13 years' experience in technology, advertising, government, and sports/entertainment. At EVH Corp, she oversees brand identity, communications, and creative operations, driving impactful storytelling and sustainable energy transition solutions.
                   </p>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Ayana Hill is a strategic brand innovator with over 13 years' experience in technology, advertising, government, and sports/entertainment. At EVH Corp, she oversees brand identity, communications, and creative operations, driving impactful storytelling and sustainable energy transition solutions.
-                </p>
-              </div>
 
-              {/* Taylor Barnes */}
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30 md:col-span-2 lg:col-span-1">
-                <div className="mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">TB</span>
+                {/* Taylor Barnes */}
+                <div className="flex-shrink-0 w-80 bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                      <span className="text-2xl font-bold text-white">TB</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white text-center mb-2">Taylor Barnes</h3>
+                    <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                      Intern – Finance Major, Corporate Execution
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white text-center mb-2">Taylor Barnes</h3>
-                  <p className="text-emerald-400 text-sm font-medium text-center mb-4">
-                    Intern – Finance Major, Corporate Execution
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Taylor Barnes, a finance major intern at EVH Corporate Development, supports key research and operational initiatives. Currently a Dean's List student at the University of St. Thomas, she demonstrates strong analytical and entrepreneurial skills through her academic research and competition involvement.
                   </p>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Taylor Barnes, a finance major intern at EVH Corporate Development, supports key research and operational initiatives. Currently a Dean's List student at the University of St. Thomas, she demonstrates strong analytical and entrepreneurial skills through her academic research and competition involvement.
-                </p>
+
+                {/* Chris Carlson */}
+                <div className="flex-shrink-0 w-80 bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                      <span className="text-2xl font-bold text-white">CC</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white text-center mb-2">Chris Carlson</h3>
+                    <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                      CFO
+                    </p>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Christopher Carlson is a veteran public company CFO with over 20 years of experience leading financial strategy, regulatory compliance, and capital markets execution. As Chief Financial Officer at 360Fuel, he brings deep expertise in SEC reporting, investor relations, and infrastructure finance. Previously, he served as CFO of Vertex Energy (NASDAQ: VTNR), where he led the company's public market transition and national growth strategy. His leadership reinforces 360Fuel's operational discipline and institutional alignment as it scales its automated, AI-powered retail energy platform.
+                  </p>
+                </div>
+
+                {/* Paul Cowart */}
+                <div className="flex-shrink-0 w-80 bg-gradient-to-br from-gray-900/60 to-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-emerald-400/30">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center p-4 mx-auto mb-4">
+                      <span className="text-2xl font-bold text-white">PC</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white text-center mb-2">Paul Cowart</h3>
+                    <p className="text-emerald-400 text-sm font-medium text-center mb-4">
+                      AI Product Manager
+                    </p>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Paul is an IBM-certified Product Manager with deep expertise in artificial intelligence and a proven track record in sales. He combines a strong technical foundation with years of client-facing experience, allowing him to align product innovation with market needs. Paul is passionate about applying emerging technologies to create practical, growth-focused solutions, and his ability to connect strategy with execution makes him a valuable addition to the team.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
