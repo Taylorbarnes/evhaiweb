@@ -121,7 +121,7 @@ export default function Page() {
         </div>
       </div>
       {/* Chat Container */}
-      <div className="relative max-w-3xl w-full h-[70vh] flex flex-col rounded-3xl border border-white/10 bg-black/20 backdrop-blur-2xl shadow-2xl overflow-hidden mb-8">
+      <div className="relative max-w-6xl w-full h-[80vh] mx-4 md:mx-8 lg:mx-auto flex flex-col rounded-3xl border border-white/10 bg-black/20 backdrop-blur-2xl shadow-2xl overflow-hidden mb-8">
         <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500/20 via-gray-600/20 to-emerald-500/20 rounded-3xl blur opacity-75"></div>
         <header className="relative z-10 p-6 border-b border-white/10 flex items-center gap-3">
           <EVHLogo className="h-10 w-10" />
@@ -134,11 +134,11 @@ export default function Page() {
             </p>
           </div>
         </header>
-        <main ref={streamRef} className="relative z-10 flex-1 overflow-auto px-6 py-6 space-y-6">
+        <main ref={streamRef} className="relative z-10 flex-1 overflow-auto px-8 py-8 space-y-6">
           {messages.map((m, i) => (
             <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
               <div
-                className={`max-w-[75%] px-5 py-4 rounded-2xl text-sm leading-relaxed border shadow-lg backdrop-blur-sm
+                className={`max-w-[90%] md:max-w-[85%] lg:max-w-[80%] px-6 py-4 rounded-2xl text-base leading-relaxed border shadow-lg backdrop-blur-sm
                   ${m.role === "user"
                     ? "bg-gradient-to-r from-emerald-600/80 to-emerald-700/80 text-white border-emerald-400/30 shadow-emerald-500/20"
                     : "bg-gray-900/40 text-gray-100 border-white/10 shadow-black/20"}`}
@@ -149,7 +149,7 @@ export default function Page() {
           ))}
           {loading && (
             <div className="flex justify-start">
-              <div className="px-5 py-4 rounded-2xl bg-gray-900/40 border border-white/10 text-gray-300 text-sm backdrop-blur-sm">
+              <div className="px-5 py-4 rounded-2xl bg-gray-900/40 border border-white/10 text-gray-300 text-base backdrop-blur-sm">
                 <span className="animate-pulse bg-gradient-to-r from-emerald-400 to-gray-300 bg-clip-text text-transparent">
                   Thinking…
                 </span>
